@@ -1,0 +1,4948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta&family=Spline+Sans+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <h1 style="font-family: 'Mukta', sans-serif;
+    font-family: 'Spline Sans Mono', monospace;">FUTURE</h1>
+
+    <input id="burger" type="checkbox" />
+    
+    <label for="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    
+    <nav>    
+      <ul>
+        <li><a id="link" href="#">О компании</a></li>
+        <li><a id="link" href="#">Услуги</a></li>
+        <li><a id="link" href="#">
+          Объекты</a></li>
+      </ul>  
+    </nav>
+    <style>
+      #link{
+  display: inline-block;
+  position: relative;
+  color: black;
+  font-family: 'Mukta', sans-serif;
+font-family: 'Spline Sans Mono', monospace;
+}
+#link:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+#link:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+        body {
+  background: #020304;
+}
+
+body h1 {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  z-index: 6;
+  font-size: 20px;
+  font-weight: 900;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+body h1 > span {
+  text-transform: none;
+  opacity: 0.5;
+  font-weight: 300;
+  font-size: 12px;
+}
+body input + label {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  height: 20px;
+  width: 15px;
+  z-index: 5;
+}
+body input + label span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  margin-top: -1px;
+  left: 0;
+  display: block;
+  background: #020304;
+  transition: 0.5s;
+}
+body input + label span:first-child {
+  top: 3px;
+}
+body input + label span:last-child {
+  top: 16px;
+}
+body label:hover {
+  cursor: pointer;
+}
+body input:checked + label span {
+  opacity: 0;
+  top: 50%;
+}
+body input:checked + label span:first-child {
+  opacity: 1;
+  transform: rotate(405deg);
+}
+body input:checked + label span:last-child {
+  opacity: 1;
+  transform: rotate(-405deg);
+}
+body input ~ nav {
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 3;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  overflow: hidden;
+}
+body input ~ nav > ul {
+  text-align: center;
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  right: 20%;
+}
+body input ~ nav > ul > li {
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+body input ~ nav > ul > li > a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #020304;
+  font-weight: 700;
+  font-family: sans-serif;
+  display: block;
+  padding: 30px;
+}
+body input:checked ~ nav {
+  height: 100%;
+  transition-delay: 0s;
+}
+body input:checked ~ nav > ul > li {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+    </style>
+    
+
+    
+
+
+<!-- <section class="hero" id="home">
+  <div class="container">
+
+    <div class="hero-content">
+
+      <p class="hero-subtitle">
+        <ion-icon name="home"></ion-icon>
+
+        <span style="font-family: 'Mukta', sans-serif;
+        font-family: 'Spline Sans Mono', monospace;">Real commerce Agency</span>
+      </p>
+
+      <h2 style="font-family: 'Mukta', sans-serif;
+      font-family: 'Spline Sans Mono', monospace;" class="h1 hero-title">Find Your Dream House By Us</h2>
+
+      <p style="font-family: 'Mukta', sans-serif;
+      font-family: 'Spline Sans Mono', monospace;" class="hero-text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+      </p>
+
+      <button style="font-family: 'Mukta', sans-serif;
+      font-family: 'Spline Sans Mono', monospace;" class="btn">Make An Enquiry</button>
+
+    </div>
+
+    <figure class="hero-banner">
+      <img src="https://i.pinimg.com/originals/3e/c1/1e/3ec11e521bcc8f87ccf7a0c85b49121c.jpg" alt="Modern house model" class="w-100">
+    </figure>
+
+  </div>
+</section> -->
+<video autoplay muted loop id="myVideo">
+  <source src="./videoplayback.mp4" type="video/mp4">
+</video>
+
+<!-- Optional: some overlay text to describe the video -->
+<div class="content">
+  <!-- Use a button to pause/play the video with JavaScript -->
+  <button style="text-align: center;" id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+<div class="sketchfab-embed-wrapper"> <iframe title="Flat roof, diagonal supports" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="640" height="480" src="https://sketchfab.com/models/b3be3a6474c149d1a85ce970245d4995/embed?autospin=1&autostart=1"> </iframe> </div>
+<style>
+    /*-----------------------------------*\
+#style.css
+\*-----------------------------------*/
+
+/**
+* copyright 2022 codewithsadee
+*/
+
+
+
+
+
+/*-----------------------------------*\
+#CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+
+/**
+* colors
+*/
+
+--dark-jungle-green: hsl(188, 63%, 7%);
+--prussian-blue: hsl(200, 69%, 14%);
+--raisin-black-1: hsl(227, 29%, 13%);
+--raisin-black-2: hsl(229, 17%, 19%);
+--yellow-green: hsl(89, 72%, 45%);
+--orange-soda: hsl(9, 100%, 62%);
+--cultured-1: hsl(0, 0%, 93%);
+--cultured-2: hsl(192, 24%, 96%);
+--misty-rose: hsl(7, 56%, 91%);
+--alice-blue: hsl(210, 100%, 97%);
+--seashell: hsl(8, 100%, 97%);
+--cadet: hsl(200, 15%, 43%);
+--white: hsl(0, 0%, 100%);
+--black: hsl(0, 0%, 0%);
+--opal: hsl(180, 20%, 62%);
+
+/**
+* typography
+*/
+
+--ff-nunito-sans: "Nunito Sans", sans-serif;
+--ff-poppins: "Poppins", sans-serif;
+
+--fs-1: 1.875rem;
+--fs-2: 1.5rem;
+--fs-3: 1.375rem;
+--fs-4: 1.125rem;
+--fs-5: 0.875rem;
+--fs-6: 0.813rem;
+--fs-7: 0.75rem;
+
+--fw-500: 500;
+--fw-600: 600;
+--fw-700: 700;
+
+/**
+* transition
+*/
+
+--transition: 0.25s ease;
+
+/**
+* spacing
+*/
+
+--section-padding: 100px;
+
+/**
+* shadow
+*/
+
+--shadow-1: 0 5px 20px 0 hsla(219, 56%, 21%, 0.1);
+--shadow-2: 0 16px 32px hsla(188, 63%, 7%, 0.1);
+
+}
+
+
+
+
+
+/*-----------------------------------*\
+#RESET
+\*-----------------------------------*/
+
+*, *::before, *::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+img,
+span,
+button,
+ion-icon { display: block; }
+
+.btn {
+border: none;
+background: none;
+font: inherit;
+text-align: left;
+cursor: pointer;
+}
+
+ion-icon { pointer-events: none; }
+
+html {
+font-family: 'Mukta', sans-serif;
+font-family: 'Spline Sans Mono', monospace;
+scroll-behavior: smooth;
+}
+
+body {
+background: var(--white);
+overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+width: 10px;
+height: 8px;
+}
+
+::-webkit-scrollbar-track { background: var(--white); }
+
+::-webkit-scrollbar-thumb {
+background: var(--cadet);
+border-left: 2px solid var(--white);
+}
+
+
+
+
+
+/*-----------------------------------*\
+#REUSED STYLE
+\*-----------------------------------*/
+
+.container { padding-inline: 15px; }
+
+button { transition: var(--transition); }
+
+.h1 {
+color: var(--dark-jungle-green);
+font-family: var(--ff-poppins);
+line-height: 1.3;
+}
+
+.h1 {
+font-size: var(--fs-1);
+line-height: 1;
+}
+
+.btn {
+position: relative;
+background: black;
+color: var(--white);
+font-family: var(--ff-poppins);
+font-size: var(--fs-5);
+text-transform: var(--text-transform, capitalize);
+border: 1px solid black;
+padding: 10px 20px;
+z-index: 1;
+}
+
+.btn:is(:hover, :focus) {
+background: var(--black);
+color: var(--dark-jungle-green);
+border-color: var(--black);
+}
+
+.btn::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+background: var(--white);
+transition: var(--transition);
+z-index: -1;
+}
+
+.btn:is(:hover, :focus)::before { width: 100%; }
+
+.w-100 { width: 100%; }
+
+
+
+
+
+/*-----------------------------------*\
+#HEADER
+\*-----------------------------------*/
+
+.header-top-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+.header-top-btn:is(:hover, :focus) { --orange-soda: hsl(7, 72%, 46%); }
+
+.navbar-link:is(:hover, :focus) { color: black; }
+
+.header-bottom-actions-btn:is(:hover, :focus) ion-icon { color: var(--orange-soda); }
+
+
+
+
+
+/*-----------------------------------*\
+#HERO
+\*-----------------------------------*/
+
+.hero {
+  font-family: 'Mukta', sans-serif;
+    font-family: 'Spline Sans Mono', monospace !important;
+
+padding-block: var(--section-padding);
+display: block;margin-left: auto;margin-right: auto;
+}
+
+.hero-content { margin-bottom: 60px; }
+
+.hero-subtitle {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+gap: 5px;
+margin-bottom: 20px;
+}
+
+.hero-subtitle ion-icon { color: var(--orange-soda); }
+
+.hero-subtitle span {
+color: var(--dark-jungle-green);
+font-size: var(--fs-5);
+font-weight: var(--fw-700);
+}
+
+.hero-title { margin-bottom: 20px; }
+
+.hero-text {
+color: var(--cadet);
+font-size: var(--fs-5);
+line-height: 1.8;
+padding-left: 15px;
+border-left: 1px solid;
+margin-bottom: 30px;
+}
+
+
+
+
+
+/*-----------------------------------*\
+#ABOUT
+\*-----------------------------------*/
+
+
+
+
+
+/*-----------------------------------*\
+#SERVICE
+\*-----------------------------------*/
+
+.service-card .card-title > a:is(:hover, :focus) { color: var(--orange-soda); }
+
+.service-card:is(:hover, :focus) .card-link { color: var(--orange-soda); }
+
+.service-card:is(:hover, :focus)::after { width: 100%; }
+
+
+
+
+
+/*-----------------------------------*\
+#PROPERTY
+\*-----------------------------------*/
+
+.banner-actions-btn:is(:hover, :focus) { color: var(--orange-soda); }
+
+.property-card .card-title > a:is(:hover, :focus) { color: var(--orange-soda); }
+
+.property-card .card-item :is(strong, ion-icon) { display: inline-block; }
+
+.author-name > a:is(:hover, :focus) { color: var(--orange-soda); }
+
+.card-footer-actions-btn:is(:hover, :focus) {
+background: var(--orange-soda);
+color: var(--white);
+}
+
+
+
+
+
+/*-----------------------------------*\
+#FEATURES
+\*-----------------------------------*/
+
+.features-card:is(:hover, :focus) { background: var(--orange-soda); }
+
+.features-card:is(:hover, :focus) .card-title { color: var(--white); }
+
+.features-card:is(:hover, :focus) .card-btn { color: var(--orange-soda); }
+
+
+
+
+
+/*-----------------------------------*\
+#BLOG
+\*-----------------------------------*/
+
+.blog-card:is(:hover, :focus) .card-banner img { transform: scale(1.1); }
+
+.blog-card :is(.card-meta-link, .publish-date) {
+color: var(--cadet);
+font-size: var(--fs-7);
+font-weight: var(--fw-600);
+display: flex;
+align-items: center;
+gap: 5px;
+transition: var(--transition);
+}
+
+.blog-card :is(.card-meta-link, .publish-date) ion-icon { color: var(--orange-soda); }
+
+.blog-card .card-meta-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+.blog-card .blog-title:is(:hover, :focus) { color: var(--orange-soda); }
+
+
+
+
+
+/*-----------------------------------*\
+#CTA
+\*-----------------------------------*/
+
+.cta-btn:is(:hover, :focus) {
+background: none;
+color: var(--white);
+border-color: transparent;
+}
+
+
+
+
+
+/*-----------------------------------*\
+#FOOTER
+\*-----------------------------------*/
+
+.contact-link :is(address, span) {
+font-size: var(--fs-5);
+transition: var(--transition);
+}
+
+.contact-link:is(:hover, :focus) span { color: var(--orange-soda); }
+
+.footer-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+.copyright a:is(:hover, :focus) { color: var(--orange-soda); }
+
+
+
+
+
+/*-----------------------------------*\
+#MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+* responsive for larger than 600px screen
+*/
+
+@media (min-width: 600px) {
+
+/**
+* CUSTOM PROPERTY
+*/
+
+:root {
+
+/**
+* typography
+*/
+
+--fs-2: 1.875rem;
+
+}
+
+
+
+/**
+* REUSED STYLE
+*/
+
+.container {
+max-width: 550px;
+margin-inline: auto;
+}
+
+
+
+/**
+* SERVICE
+*/
+
+
+
+/**
+* PROPERTY
+*/
+
+
+
+/**
+* CTA
+*/
+
+
+
+/**
+* FOOTER
+*/
+
+}
+
+
+
+
+
+/**
+* responsive for larger than 768px screen
+*/
+
+@media (min-width: 768px) {
+
+/**
+* CUSTOM PROPERTY
+*/
+
+:root {
+
+/**
+* typography
+*/
+
+--fs-1: 2.5rem;
+--fs-5: 0.938rem;
+--fs-6: 0.875rem;
+
+}
+
+
+
+/**
+* REUSED STYLE
+*/
+
+.container { max-width: 720px; }
+
+.btn {
+--fs-5: 1rem;
+padding: 12px 28px;
+}
+
+
+
+/**
+* HEADER
+*/
+
+
+
+/**
+* HERO
+*/
+
+.hero-content { max-width: 400px; }
+
+
+
+/**
+* ABOUT
+*/
+
+
+
+/**
+* FEATURES
+*/
+
+
+
+/**
+* BLOG
+*/
+
+
+
+/**
+* CTA
+*/
+
+
+
+/**
+* FOOTER
+*/
+
+}
+
+
+
+
+
+/**
+* responsive for larger than 992px screen
+*/
+
+@media (min-width: 992px) {
+
+/**
+* CUSTOM PROPERTY
+*/
+
+:root {
+
+/**
+* typography
+*/
+
+--fs-1: 3.125rem;
+--fs-4: 1.375rem;
+
+}
+
+
+
+/**
+* REUSED STYLE
+*/
+
+.container { max-width: 970px; }
+
+.btn { padding: 15px 40px; }
+
+
+
+/**
+* HEADER
+*/
+
+
+
+/**
+* HERO
+*/
+
+.hero-content {
+max-width: unset;
+margin-bottom: 0;
+}
+
+.hero .container {
+display: grid;
+grid-template-columns: 1fr 1fr;
+align-items: center;
+}
+
+
+
+/**
+* ABOUT
+*/
+
+
+
+/**
+* SERVICE
+*/
+
+
+
+/**
+* PROPERTY
+*/
+
+
+
+/**
+* FEATURES
+*/
+
+
+
+/**
+* BLOG
+*/
+
+
+
+/**
+* CTA
+*/
+
+.cta-card :is(.card-content, .cta-btn) { margin: 0; }
+
+
+
+/**
+* FOOTER
+*/
+
+}
+
+
+
+
+
+/**
+* responsive for larger than 1200px screen
+*/
+
+@media (min-width: 1200px) {
+
+/**
+* CUSTOM PROPERTY
+*/
+
+:root {
+
+/**
+* typography
+*/
+
+--fs-2: 2.75rem;
+--fs-4: 1.5rem;
+
+}
+
+
+
+/**
+* REUSED STYLE
+*/
+
+.container { max-width: 1200px; }
+
+
+
+/**
+* HEADER
+*/
+
+
+
+/**
+* HERO
+*/
+
+.hero-text {
+padding-left: 30px;
+max-width: 450px;
+margin-bottom: 40px;
+}
+
+
+
+/**
+* FEATURES
+*/
+
+
+
+/**
+* CTA
+*/
+
+
+
+/**
+* FOOTER
+*/
+
+}
+</style>
+
+   
+
+
+<style>
+  
+</style>
+
+
+<section class="service" id="service">
+  <div class="container">
+
+    <p style="font-family: 'Mukta', sans-serif;
+    font-family: 'Spline Sans Mono', monospace;" class="section-subtitle">Наши услуги</p>
+
+    <h2 style="font-family: 'Mukta', sans-serif;
+    font-family: 'Spline Sans Mono', monospace;" class="h2 section-title">Наши основные направления</h2>
+
+    <ul class="service-list">
+
+      <li>
+        <div class="service-card">
+
+          <div class="card-icon">
+            <img src="./assets/images/service-1.png" alt="Service icon">
+          </div>
+
+          <h3 style="font-family: 'Mukta', sans-serif;
+          font-family: 'Spline Sans Mono', monospace;" class="h3 card-title">
+            <a href="#">Купить дом</a>
+          </h3>
+
+          <p style="font-family: 'Mukta', sans-serif;
+          font-family: 'Spline Sans Mono', monospace;" class="card-text">
+            На сайте представлено более 1 миллиона домов на продажу, мы подберем для вас дом, который вы захотите назвать своим домом.
+          </p>
+
+          <a href="#" class="card-link">
+            <span>Найти дом</span>
+
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </a>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="service-card">
+
+          <div class="card-icon">
+            <img src="./assets/images/service-2.png" alt="Service icon">
+          </div>
+
+          <h3 style="font-family: 'Mukta', sans-serif;
+          font-family: 'Spline Sans Mono', monospace;" class="h3 card-title">
+            <a  href="#">Аренда жилья</a>
+          </h3>
+
+          <p style="font-family: 'Mukta', sans-serif;
+          font-family: 'Spline Sans Mono', monospace;" class="card-text">
+            На сайте представлено более 1 миллиона домов на продажу, мы подберем для вас дом, который вы захотите назвать своим домом.
+          </p>
+
+          <a href="#" class="card-link">
+            <span style="font-family: 'Mukta', sans-serif;
+            font-family: 'Spline Sans Mono', monospace;">Найти дом</span>
+
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </a>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="service-card">
+
+          <div class="card-icon">
+            <img src="./assets/images/service-3.png" alt="Service icon">
+          </div>
+
+          <h3 class="h3 card-title">
+            <a style="font-family: 'Mukta', sans-serif;
+            font-family: 'Spline Sans Mono', monospace;" href="#">Продать дом</a>
+          </h3>
+
+          <p class="card-text" style="font-family: 'Mukta', sans-serif;
+          font-family: 'Spline Sans Mono', monospace;">
+            На сайте представлено более 1 миллиона домов на продажу, мы подберем для вас дом, который вы захотите назвать своим домом.
+
+
+          </p>
+
+          <a href="#" class="card-link">
+            <span style="font-family: 'Mukta', sans-serif;
+            font-family: 'Spline Sans Mono', monospace;">Найти дом</span>
+
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </a>
+
+        </div>
+      </li>
+
+    </ul>
+
+  </div>
+</section>
+<style>
+    /*-----------------------------------*\
+#style.css
+\*-----------------------------------*/
+
+/**
+* copyright 2022 codewithsadee
+*/
+
+
+
+
+
+/*-----------------------------------*\
+#CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+
+/**
+* colors
+*/
+
+--dark-jungle-green: hsl(188, 63%, 7%);
+--prussian-blue: hsl(200, 69%, 14%);
+--raisin-black-1: hsl(227, 29%, 13%);
+--raisin-black-2: hsl(229, 17%, 19%);
+--yellow-green: hsl(89, 72%, 45%);
+--orange-soda: hsl(9, 100%, 62%);
+--cultured-1: hsl(0, 0%, 93%);
+--cultured-2: hsl(192, 24%, 96%);
+--misty-rose: hsl(7, 56%, 91%);
+--alice-blue: hsl(210, 100%, 97%);
+--seashell: hsl(8, 100%, 97%);
+--cadet: hsl(200, 15%, 43%);
+--white: hsl(0, 0%, 100%);
+--black: hsl(0, 0%, 0%);
+--opal: hsl(180, 20%, 62%);
+
+/**
+* typography
+*/
+
+--ff-nunito-sans: "Nunito Sans", sans-serif;
+--ff-poppins: "Poppins", sans-serif;
+
+--fs-1: 1.875rem;
+--fs-2: 1.5rem;
+--fs-3: 1.375rem;
+--fs-4: 1.125rem;
+--fs-5: 0.875rem;
+--fs-6: 0.813rem;
+--fs-7: 0.75rem;
+
+--fw-500: 500;
+--fw-600: 600;
+--fw-700: 700;
+
+/**
+* transition
+*/
+
+--transition: 0.25s ease;
+
+/**
+* spacing
+*/
+
+--section-padding: 100px;
+
+/**
+* shadow
+*/
+
+--shadow-1: 0 5px 20px 0 hsla(219, 56%, 21%, 0.1);
+--shadow-2: 0 16px 32px hsla(188, 63%, 7%, 0.1);
+
+}
+
+
+
+
+
+/*-----------------------------------*\
+#RESET
+\*-----------------------------------*/
+
+*, *::before, *::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+li { list-style: none; }
+
+a { text-decoration: none; }
+
+a,
+img,
+span,
+ion-icon { display: block; }
+
+ion-icon { pointer-events: none; }
+
+html {
+font-family: var(--ff-nunito-sans);
+scroll-behavior: smooth;
+}
+
+body {
+overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+width: 10px;
+height: 8px;
+}
+
+::-webkit-scrollbar-track { background: var(--white); }
+
+::-webkit-scrollbar-thumb {
+background: var(--cadet);
+border-left: 2px solid var(--white);
+}
+
+
+
+
+
+/*-----------------------------------*\
+#REUSED STYLE
+\*-----------------------------------*/
+
+.container { padding-inline: 15px; }
+
+a { transition: var(--transition); }
+
+.h2,
+.h3 {
+color: var(--dark-jungle-green);
+font-family: var(--ff-poppins);
+line-height: 1.3;
+}
+
+.h2 { font-size: var(--fs-2); }
+
+.h3 {
+font-size: var(--fs-4);
+font-weight: var(--font-weight, 700);
+}
+
+
+
+.h3 > a { color: inherit; }
+
+.btn:is(:hover, :focus) {
+background: var(--black);
+color: var(--dark-jungle-green);
+border-color: var(--black);
+}
+
+.btn:is(:hover, :focus)::before { width: 100%; }
+
+.section-subtitle {
+
+font-size: var(--fs-5);
+font-weight: var(--fw-600);
+padding: 5px 20px;
+background: hsla(9, 100%, 62%, 0.1);
+width: max-content;
+border-radius: 50px;
+margin-inline: auto;
+margin-bottom: 15px;
+}
+
+.section-title {
+text-align: var(--text-align, center);
+margin-bottom: var(--margin-bottom, 50px);
+}
+
+
+
+
+
+
+
+/*-----------------------------------*\
+#HEADER
+\*-----------------------------------*/
+
+.header-top-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+.header-top-btn:is(:hover, :focus) { --orange-soda: hsl(7, 72%, 46%); }
+
+.navbar-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+.header-bottom-actions-btn:is(:hover, :focus) ion-icon { color: var(--orange-soda); }
+
+
+
+
+
+/*-----------------------------------*\
+#HERO
+\*-----------------------------------*/
+
+
+
+
+
+/*-----------------------------------*\
+#ABOUT
+\*-----------------------------------*/
+
+
+
+
+
+/*-----------------------------------*\
+#SERVICE
+\*-----------------------------------*/
+
+.service {
+background: var(--cultured-2);
+padding-block: var(--section-padding);
+}
+
+.service-list {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 30px;
+}
+
+.service-card {
+position: relative;
+background: var(--white);
+text-align: center;
+padding: 40px 30px;
+box-shadow: var(--shadow-2);
+}
+
+.service-card .card-icon {
+width: max-content;
+margin-inline: auto;
+margin-bottom: 20px;
+}
+
+.service-card .card-title { margin-bottom: 15px; }
+
+.service-card .card-title > a:is(:hover, :focus) { color: var(--orange-soda); }
+
+.service-card .card-text {
+color: var(--cadet);
+font-size: var(--fs-5);
+line-height: 1.8;
+margin-bottom: 25px;
+}
+
+.service-card .card-link {
+color: var(--opal);
+font-size: var(--fs-5);
+font-weight: var(--fw-600);
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 5px;
+}
+
+.service-card:is(:hover, :focus) .card-link { color: black; }
+
+.service-card::after {
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+width: 0;
+height: 4px;
+background: black;
+transition: var(--transition);
+}
+
+.service-card:is(:hover, :focus)::after { width: 100%; }
+
+
+
+
+
+/*-----------------------------------*\
+#PROPERTY
+\*-----------------------------------*/
+
+.banner-actions-btn:is(:hover, :focus) { color: var(--orange-soda); }
+
+.property-card .card-title > a:is(:hover, :focus) { color: var(--orange-soda); }
+
+.property-card .card-item :is(strong, ion-icon) { display: inline-block; }
+
+.author-name > a:is(:hover, :focus) { color: var(--orange-soda); }
+
+.card-footer-actions-btn:is(:hover, :focus) {
+background: var(--orange-soda);
+color: var(--white);
+}
+
+
+
+
+
+/*-----------------------------------*\
+#FEATURES
+\*-----------------------------------*/
+
+.features-card:is(:hover, :focus) { background: var(--orange-soda); }
+
+.features-card:is(:hover, :focus) .card-title { color: var(--white); }
+
+.features-card:is(:hover, :focus) .card-btn { color: var(--orange-soda); }
+
+
+
+
+
+/*-----------------------------------*\
+#BLOG
+\*-----------------------------------*/
+
+.blog-card:is(:hover, :focus) .card-banner img { transform: scale(1.1); }
+
+.blog-card :is(.card-meta-link, .publish-date) {
+color: var(--cadet);
+font-size: var(--fs-7);
+font-weight: var(--fw-600);
+display: flex;
+align-items: center;
+gap: 5px;
+transition: var(--transition);
+}
+
+.blog-card :is(.card-meta-link, .publish-date) ion-icon { color: var(--orange-soda); }
+
+.blog-card .card-meta-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+.blog-card .blog-title:is(:hover, :focus) { color: var(--orange-soda); }
+
+
+
+
+
+/*-----------------------------------*\
+#CTA
+\*-----------------------------------*/
+
+.cta-btn:is(:hover, :focus) {
+background: none;
+color: var(--white);
+border-color: transparent;
+}
+
+
+
+
+
+/*-----------------------------------*\
+#FOOTER
+\*-----------------------------------*/
+
+.contact-link :is(address, span) {
+font-size: var(--fs-5);
+transition: var(--transition);
+}
+
+.contact-link:is(:hover, :focus) span { color: var(--orange-soda); }
+
+.footer-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+.copyright a:is(:hover, :focus) { color: var(--orange-soda); }
+
+
+
+
+
+/*-----------------------------------*\
+#MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+* responsive for larger than 600px screen
+*/
+
+@media (min-width: 600px) {
+
+/**
+* CUSTOM PROPERTY
+*/
+
+:root {
+
+/**
+* typography
+*/
+
+--fs-2: 1.875rem;
+
+}
+
+
+
+/**
+* REUSED STYLE
+*/
+
+.container {
+max-width: 550px;
+margin-inline: auto;
+}
+
+
+
+/**
+* SERVICE
+*/
+
+.service-list > li { width: calc(50% - 15px); }
+
+
+
+/**
+* PROPERTY
+*/
+
+
+
+/**
+* CTA
+*/
+
+
+
+/**
+* FOOTER
+*/
+
+}
+
+
+
+
+
+/**
+* responsive for larger than 768px screen
+*/
+
+@media (min-width: 768px) {
+
+/**
+* CUSTOM PROPERTY
+*/
+
+:root {
+
+/**
+* typography
+*/
+
+--fs-1: 2.5rem;
+--fs-5: 0.938rem;
+--fs-6: 0.875rem;
+
+}
+
+
+
+/**
+* REUSED STYLE
+*/
+
+.container { max-width: 720px; }
+
+
+
+/**
+* HEADER
+*/
+
+
+
+/**
+* HERO
+*/
+
+
+
+/**
+* ABOUT
+*/
+
+
+
+/**
+* FEATURES
+*/
+
+
+
+/**
+* BLOG
+*/
+
+
+
+/**
+* CTA
+*/
+
+
+
+/**
+* FOOTER
+*/
+
+}
+
+
+
+
+
+/**
+* responsive for larger than 992px screen
+*/
+
+@media (min-width: 992px) {
+
+/**
+* CUSTOM PROPERTY
+*/
+
+:root {
+
+/**
+* typography
+*/
+
+--fs-1: 3.125rem;
+--fs-4: 1.375rem;
+
+}
+
+
+
+/**
+* REUSED STYLE
+*/
+
+.container { max-width: 970px; }
+
+
+
+/**
+* HEADER
+*/
+
+
+
+/**
+* HERO
+*/
+
+
+
+/**
+* ABOUT
+*/
+
+
+
+/**
+* SERVICE
+*/
+
+.service-list > li { width: calc(33.33% - 20px); }
+
+
+
+/**
+* PROPERTY
+*/
+
+
+
+/**
+* FEATURES
+*/
+
+
+
+/**
+* BLOG
+*/
+
+
+
+/**
+* CTA
+*/
+
+.cta-card :is(.card-content, .cta-btn) { margin: 0; }
+
+
+
+/**
+* FOOTER
+*/
+
+}
+
+
+
+
+
+/**
+* responsive for larger than 1200px screen
+*/
+
+@media (min-width: 1200px) {
+
+/**
+* CUSTOM PROPERTY
+*/
+
+:root {
+
+/**
+* typography
+*/
+
+--fs-2: 2.75rem;
+--fs-4: 1.5rem;
+
+}
+
+
+
+/**
+* REUSED STYLE
+*/
+
+.container { max-width: 1200px; }
+
+
+
+/**
+* HEADER
+*/
+
+
+
+/**
+* HERO
+*/
+
+
+
+/**
+* FEATURES
+*/
+
+
+
+/**
+* CTA
+*/
+
+
+
+/**
+* FOOTER
+*/
+
+}
+</style>
+
+
+<section class="property" id="property">
+  <div class="container">
+
+    <p class="section-subtitle">Объекты</p>
+
+    <h2 class="h2 section-title">Актуальные объявления</h2>
+
+    <ul class="property-list has-scrollbar">
+
+      <li>
+        <div class="property-card">
+
+          <figure class="card-banner">
+
+            <a href="#">
+              <img src="https://api.interior.ru/media/images/APOST/Drobotova/Drobotova_27.jpg" alt="New Apartment Nice View" class="w-100">
+            </a>
+
+            <div class="card-badge green">В АРЕНДУ</div>
+
+            <div class="banner-actions">
+
+              <button class="banner-actions-btn">
+                <ion-icon name="location"></ion-icon>
+
+                <address>Ош, Кыргызстан</address>
+              </button>
+
+              <button class="banner-actions-btn">
+                <ion-icon name="camera"></ion-icon>
+
+                <span>4</span>
+              </button>
+
+              <button class="banner-actions-btn">
+                <ion-icon name="film"></ion-icon>
+
+                <span>2</span>
+              </button>
+
+            </div>
+
+          </figure>
+
+          <div class="card-content">
+
+            <div class="card-price">
+              <strong>2,000,000 сом</strong>
+            </div>
+
+            <h3 class="h3 card-title">
+              <a href="#">Новая квартира с прекрасным видом</a>
+            </h3>
+
+            <p class="card-text">
+              Красивый огромный дом на одну семью в самом сердце Оша. Недавно отремонтированный с новой древесиной
+            </p>
+
+            <ul class="card-list">
+
+              <li class="card-item">
+                <strong>3</strong>
+
+                <ion-icon name="bed-outline"></ion-icon>
+
+                <span>Спальни</span>
+              </li>
+
+              <li class="card-item">
+                <strong>2</strong>
+
+                <ion-icon name="man-outline"></ion-icon>
+
+                <span>Ванны</span>
+              </li>
+
+              <li class="card-item">
+                <strong>3450</strong>
+
+                <ion-icon name="square-outline"></ion-icon>
+
+                <span>кв.м</span>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="card-footer">
+
+            <div class="card-author">
+
+              <figure class="author-avatar">
+                <img src="https://sputnik.kg/img/07e5/04/07/1052030742_484:0:2352:1868_1920x0_80_0_0_60cf1d6ca982fc579719eb3f0065aba3.jpg" alt="William Seklo" class="w-100">
+              </figure>
+
+              <div>
+                <p class="author-name">
+                  <a href="#">Садыр Жапаров</a>
+                </p>
+
+                <p class="author-title">Агент по недвижимости</p>
+              </div>
+
+            </div>
+
+            <div class="card-footer-actions">
+
+              <button class="card-footer-actions-btn">
+                <ion-icon name="resize-outline"></ion-icon>
+              </button>
+
+              <button class="card-footer-actions-btn">
+                <ion-icon name="heart-outline"></ion-icon>
+              </button>
+
+              <button class="card-footer-actions-btn">
+                <ion-icon name="add-circle-outline"></ion-icon>
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="property-card">
+
+          <figure class="card-banner">
+
+            <a href="#">
+              <img src="https://www.pufikhomes.com/wp-content/uploads/2017/04/sovremennaya-kvartira-v-vilniuse-81sqm-pufikhomes-1.jpg" alt="Modern Apartments" class="w-100">
+            </a>
+
+            <div class="card-badge orange">ДЛЯ ПРОДАЖИ</div>
+
+            <div class="banner-actions">
+
+              <button class="banner-actions-btn">
+                <ion-icon name="location"></ion-icon>
+
+                <address>Бишкек, Кыргызстан</address>
+              </button>
+
+              <button class="banner-actions-btn">
+                <ion-icon name="camera"></ion-icon>
+
+                <span>4</span>
+              </button>
+
+              <button class="banner-actions-btn">
+                <ion-icon name="film"></ion-icon>
+
+                <span>2</span>
+              </button>
+
+            </div>
+
+          </figure>
+
+          <div class="card-content">
+
+            <div class="card-price">
+              <strong>3,000,000 сом</strong>
+            </div>
+
+            <h3 class="h3 card-title">
+              <a href="#">Современная квартира</a>
+            </h3>
+
+            <p class="card-text">
+              Красивый огромный дом на одну семью в самом сердце Бишкека. Недавно отремонтированный с новой древесиной
+            </p>
+
+            <ul class="card-list">
+
+              <li class="card-item">
+                <strong>3</strong>
+
+                <ion-icon name="bed-outline"></ion-icon>
+
+                <span>Спальни</span>
+              </li>
+
+              <li class="card-item">
+                <strong>2</strong>
+
+                <ion-icon name="man-outline"></ion-icon>
+
+                <span>Ванны</span>
+              </li>
+
+              <li class="card-item">
+                <strong>3450</strong>
+
+                <ion-icon name="square-outline"></ion-icon>
+
+                <span>кв.м</span>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="card-footer">
+
+            <div class="card-author">
+
+              <figure class="author-avatar">
+                <img src="https://yt3.ggpht.com/_dOESLJ4YOA8HKbw9Efhqu9bI4gIvizD6OVsIIyixFs4aHv4NXQf55Vc1_tPhEhLidOXm3VAsw=s900-c-k-c0x00ffffff-no-rj" alt="William Seklo" class="w-100">
+              </figure>
+
+              <div>
+                <p class="author-name">
+                  <a href="#">Мирбек Атабеков</a>
+                </p>
+
+                <p class="author-title">Агент по недвижимости</p>
+              </div>
+
+            </div>
+
+            <div class="card-footer-actions">
+
+              <button class="card-footer-actions-btn">
+                <ion-icon name="resize-outline"></ion-icon>
+              </button>
+
+              <button class="card-footer-actions-btn">
+                <ion-icon name="heart-outline"></ion-icon>
+              </button>
+
+              <button class="card-footer-actions-btn">
+                <ion-icon name="add-circle-outline"></ion-icon>
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="property-card">
+
+          <figure class="card-banner">
+
+            <a href="#">
+              <img src="https://q-xx.bstatic.com/xdata/images/hotel/840x460/282319383.jpg?k=b2a741e3f7022d74c3b55c5b8b93529778b7ec668d1c57127bf900157c1441c9&o=" alt="Comfortable Apartment" class="w-100">
+            </a>
+
+            <div class="card-badge green">В АРЕНДУ</div>
+
+            <div class="banner-actions">
+
+              <button class="banner-actions-btn">
+                <ion-icon name="location"></ion-icon>
+
+                <address>Баткен, Кыргызстан</address>
+              </button>
+
+              <button class="banner-actions-btn">
+                <ion-icon name="camera"></ion-icon>
+
+                <span>4</span>
+              </button>
+
+              <button class="banner-actions-btn">
+                <ion-icon name="film"></ion-icon>
+
+                <span>2</span>
+              </button>
+
+            </div>
+
+          </figure>
+
+          <div class="card-content">
+
+            <div class="card-price">
+              <strong>1,500,000 сом</strong>
+            </div>
+
+            <h3 class="h3 card-title">
+              <a href="#">Комфортная квартира</a>
+            </h3>
+
+            <p class="card-text">
+              Красивый огромный дом на одну семью в самом сердце Баткена. Недавно отремонтированный с новой древесиной
+            </p>
+
+            <ul class="card-list">
+
+              <li class="card-item">
+                <strong>3</strong>
+
+                <ion-icon name="bed-outline"></ion-icon>
+
+                <span>Спальни</span>
+              </li>
+
+              <li class="card-item">
+                <strong>2</strong>
+
+                <ion-icon name="man-outline"></ion-icon>
+
+                <span>Ванны</span>
+              </li>
+
+              <li class="card-item">
+                <strong>3450</strong>
+
+                <ion-icon name="square-outline"></ion-icon>
+
+                <span>кв.м</span>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="card-footer">
+
+            <div class="card-author">
+
+              <figure class="author-avatar">
+                <img src="https://st-1.akipress.org/st_runews/.storage/limon3/images/NOVEMBER/e90c782f6cbbee41fa165993040c6a35.jpg" alt="William Seklo" class="w-100">
+              </figure>
+
+              <div>
+                <p class="author-name">
+                  <a href="#">Самат Эркинбеков</a>
+                </p>
+
+                <p class="author-title">Агент по недвижимости</p>
+              </div>
+
+            </div>
+
+            <div class="card-footer-actions">
+
+              <button class="card-footer-actions-btn">
+                <ion-icon name="resize-outline"></ion-icon>
+              </button>
+
+              <button class="card-footer-actions-btn">
+                <ion-icon name="heart-outline"></ion-icon>
+              </button>
+
+              <button class="card-footer-actions-btn">
+                <ion-icon name="add-circle-outline"></ion-icon>
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="property-card">
+
+          <figure class="card-banner">
+
+            <a href="#">
+              <img src="https://remont-f.ru/upload/iblock/da2/dizayn-interyera-4-komnantoj-kvartiry-144-kv-m-foto-9-3914.jpg" alt="Luxury villa in Rego Park" class="w-100">
+            </a>
+
+            <div class="card-badge green">В АРЕНДУ</div>
+
+            <div class="banner-actions">
+
+              <button class="banner-actions-btn">
+                <ion-icon name="location"></ion-icon>
+
+                <address>Ош, Кыргызстан</address>
+              </button>
+
+              <button class="banner-actions-btn">
+                <ion-icon name="camera"></ion-icon>
+
+                <span>4</span>
+              </button>
+
+              <button class="banner-actions-btn">
+                <ion-icon name="film"></ion-icon>
+
+                <span>2</span>
+              </button>
+
+            </div>
+
+          </figure>
+
+          <div class="card-content">
+
+            <div class="card-price">
+              <strong>2,500,000</strong>
+            </div>
+
+            <h3 class="h3 card-title">
+              <a href="#">Роскошная Квартира</a>
+            </h3>
+
+            <p class="card-text">
+              Красивый огромный дом на одну семью в самом сердце Оша. Недавно отремонтированный с новой древесиной
+            </p>
+
+            <ul class="card-list">
+
+              <li class="card-item">
+                <strong>3</strong>
+
+                <ion-icon name="bed-outline"></ion-icon>
+
+                <span>Спальни</span>
+              </li>
+
+              <li class="card-item">
+                <strong>2</strong>
+
+                <ion-icon name="man-outline"></ion-icon>
+
+                <span>Ванны</span>
+              </li>
+
+              <li class="card-item">
+                <strong>3450</strong>
+
+                <ion-icon name="square-outline"></ion-icon>
+
+                <span>кв.м</span>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="card-footer">
+
+            <div class="card-author">
+
+              <figure class="author-avatar">
+                <img src="https://st-1.akipress.org/st_gallery/72/813372.ea515c45fad464ba8cafd61040789890.500.jpg" alt="William Seklo" class="w-100">
+              </figure>
+
+              <div>
+                <p class="author-name">
+                  <a href="#">Керим Турапов</a>
+                </p>
+
+                <p class="author-title">Агент по недвижимости</p>
+              </div>
+
+            </div>
+
+            <div class="card-footer-actions">
+
+              <button class="card-footer-actions-btn">
+                <ion-icon name="resize-outline"></ion-icon>
+              </button>
+
+              <button class="card-footer-actions-btn">
+                <ion-icon name="heart-outline"></ion-icon>
+              </button>
+
+              <button class="card-footer-actions-btn">
+                <ion-icon name="add-circle-outline"></ion-icon>
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+      </li>
+
+    </ul>
+
+  </div>
+</section>
+<style>
+    /*-----------------------------------*\
+#style.css
+\*-----------------------------------*/
+
+/**
+* copyright 2022 codewithsadee
+*/
+
+
+
+
+
+/*-----------------------------------*\
+#CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+
+/**
+* colors
+*/
+
+--dark-jungle-green: hsl(188, 63%, 7%);
+--prussian-blue: hsl(200, 69%, 14%);
+--raisin-black-1: hsl(227, 29%, 13%);
+--raisin-black-2: hsl(229, 17%, 19%);
+--yellow-green: hsl(89, 72%, 45%);
+--orange-soda: hsl(9, 100%, 62%);
+--cultured-1: hsl(0, 0%, 93%);
+--cultured-2: hsl(192, 24%, 96%);
+--misty-rose: hsl(7, 56%, 91%);
+--alice-blue: hsl(210, 100%, 97%);
+--seashell: hsl(8, 100%, 97%);
+--cadet: hsl(200, 15%, 43%);
+--white: hsl(0, 0%, 100%);
+--black: hsl(0, 0%, 0%);
+--opal: hsl(180, 20%, 62%);
+
+/**
+* typography
+*/
+
+--ff-nunito-sans: "Nunito Sans", sans-serif;
+--ff-poppins: "Poppins", sans-serif;
+
+--fs-1: 1.875rem;
+--fs-2: 1.5rem;
+--fs-3: 1.375rem;
+--fs-4: 1.125rem;
+--fs-5: 0.875rem;
+--fs-6: 0.813rem;
+--fs-7: 0.75rem;
+
+--fw-500: 500;
+--fw-600: 600;
+--fw-700: 700;
+
+/**
+* transition
+*/
+
+--transition: 0.25s ease;
+
+/**
+* spacing
+*/
+
+--section-padding: 100px;
+
+/**
+* shadow
+*/
+
+--shadow-1: 0 5px 20px 0 hsla(219, 56%, 21%, 0.1);
+--shadow-2: 0 16px 32px hsla(188, 63%, 7%, 0.1);
+
+}
+
+
+
+
+
+/*-----------------------------------*\
+#RESET
+\*-----------------------------------*/
+
+*, *::before, *::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+li { list-style: none; }
+
+a { text-decoration: none; }
+
+a,
+img,
+span,
+button,
+ion-icon { display: block; }
+
+button {
+border: none;
+background: none;
+font: inherit;
+text-align: left;
+cursor: pointer;
+}
+
+address { font-style: normal; }
+
+ion-icon { pointer-events: none; }
+
+html {
+font-family: var(--ff-nunito-sans);
+scroll-behavior: smooth;
+}
+
+body {
+background: var(--white);
+overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+width: 10px;
+height: 8px;
+}
+
+::-webkit-scrollbar-track { background: var(--white); }
+
+::-webkit-scrollbar-thumb {
+background: var(--cadet);
+border-left: 2px solid var(--white);
+}
+
+
+
+
+
+/*-----------------------------------*\
+#REUSED STYLE
+\*-----------------------------------*/
+
+.container { padding-inline: 15px; }
+
+button, a { transition: var(--transition); }
+
+.h2,
+.h3 {
+color: var(--dark-jungle-green);
+font-family: var(--ff-poppins);
+line-height: 1.3;
+}
+
+.h2 { font-size: var(--fs-2); }
+
+.h3 {
+font-size: var(--fs-4);
+font-weight: var(--font-weight, 700);
+}
+
+.h3 > a { color: inherit; }
+
+.btn:is(:hover, :focus) {
+background: var(--black);
+color: var(--dark-jungle-green);
+border-color: var(--black);
+}
+
+.btn:is(:hover, :focus)::before { width: 100%; }
+
+.w-100 { width: 100%; }
+
+.section-subtitle {
+
+font-size: var(--fs-5);
+font-weight: var(--fw-600);
+padding: 5px 20px;
+background: hsla(9, 100%, 62%, 0.1);
+width: max-content;
+border-radius: 50px;
+margin-inline: auto;
+margin-bottom: 15px;
+}
+
+.section-title {
+text-align: var(--text-align, center);
+margin-bottom: var(--margin-bottom, 50px);
+}
+
+.card-badge {
+background: var(--black);
+color: var(--white);
+font-size: var(--fs-7);
+text-transform: uppercase;
+position: absolute;
+top: 15px;
+right: 15px;
+padding: 4px 10px;
+}
+
+.card-badge.green { background: var(--yellow-green); }
+
+.card-badge.orange { background: var(--orange-soda); }
+
+.has-scrollbar {
+display: flex;
+align-items: flex-start;
+gap: 15px;
+overflow-x: auto;
+margin-inline: -15px;
+padding-inline: 15px;
+scroll-padding-left: 15px;
+padding-bottom: 60px;
+scroll-snap-type: inline mandatory;
+}
+
+.has-scrollbar > li {
+min-width: 100%;
+scroll-snap-align: start;
+}
+
+.has-scrollbar::-webkit-scrollbar-track {
+background: var(--cultured-2);
+outline: 2px solid var(--cadet);
+border-radius: 10px;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+background: var(--cadet);
+border: 1px solid var(--cultured-2);
+border-radius: 10px;
+}
+
+.has-scrollbar::-webkit-scrollbar-button { width: 15%; }
+
+
+
+
+
+/*-----------------------------------*\
+#HEADER
+\*-----------------------------------*/
+
+.header-top-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+.header-top-btn:is(:hover, :focus) { --orange-soda: hsl(7, 72%, 46%); }
+
+.navbar-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+.header-bottom-actions-btn:is(:hover, :focus) ion-icon { color: var(--orange-soda); }
+
+
+
+
+
+/*-----------------------------------*\
+#HERO
+\*-----------------------------------*/
+
+
+
+
+
+/*-----------------------------------*\
+#ABOUT
+\*-----------------------------------*/
+
+
+
+
+
+/*-----------------------------------*\
+#SERVICE
+\*-----------------------------------*/
+
+.service-card .card-title > a:is(:hover, :focus) { color: var(--orange-soda); }
+
+.service-card:is(:hover, :focus) .card-link { color: var(--orange-soda); }
+
+.service-card:is(:hover, :focus)::after { width: 100%; }
+
+
+
+
+
+/*-----------------------------------*\
+#PROPERTY
+\*-----------------------------------*/
+
+.property { padding-block: var(--section-padding); }
+
+.property-card {
+border: 1px solid var(--alice-blue);
+box-shadow: var(--shadow-2);
+}
+
+.property-card .card-banner {
+position: relative;
+aspect-ratio: 2 / 1.5;
+overflow: hidden;
+}
+
+.property-card .card-banner a { height: 100%; }
+
+.property-card .card-banner img {
+height: 100%;
+object-fit: cover;
+transition: 0.5s ease;
+}
+
+.property-card:hover .card-banner img { transform: scale(1.1); }
+
+.property-card .card-banner::before {
+content: "";
+position: absolute;
+inset: 0;
+background: linear-gradient(to top, hsla(0, 0%, 0%, 0.95), transparent 30%);
+pointer-events: none;
+z-index: 1;
+}
+
+.property-card .banner-actions {
+position: absolute;
+bottom: 15px;
+left: 15px;
+right: 15px;
+display: flex;
+flex-wrap: wrap-reverse;
+align-items: center;
+gap: 15px 10px;
+z-index: 1;
+}
+
+.banner-actions-btn {
+color: var(--white);
+font-size: var(--fs-6);
+line-height: 1;
+display: flex;
+align-items: flex-end;
+gap: 4px;
+}
+
+.banner-actions-btn ion-icon { font-size: 16px; }
+
+.banner-actions-btn:first-child { margin-right: auto; }
+
+.banner-actions-btn:is(:hover, :focus) { color: var(--orange-soda); }
+
+.property-card .card-content {
+padding: 30px 15px 15px;
+border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
+}
+
+.card-price {
+color: var(--orange-soda);
+font-family: var(--ff-poppins);
+font-size: var(--fs-5);
+margin-bottom: 5px;
+}
+
+.card-price strong {
+font-size: var(--fs-4);
+font-weight: var(--fw-600);
+}
+
+.property-card .card-title {
+--font-weight: var(--fw-600);
+margin-bottom: 15px;
+}
+
+.property-card .card-title > a:is(:hover, :focus) { color: var(--orange-soda); }
+
+.property-card .card-text {
+color: var(--cadet);
+font-size: var(--fs-5);
+line-height: 1.8;
+margin-bottom: 25px;
+}
+
+.property-card .card-list {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+row-gap: 15px;
+}
+
+.property-card .card-item {
+padding-block: 5px;
+color: var(--cadet);
+font-size: var(--fs-5);
+}
+
+.property-card .card-item:not(:last-child) {
+padding-right: 15px;
+border-right: 1px solid hsla(0, 0%, 0%, 0.2);
+margin-right: 20px;
+}
+
+.property-card .card-item :is(strong, ion-icon) { display: inline-block; }
+
+.property-card .card-item ion-icon {
+margin-left: 2px;
+margin-bottom: -2px;
+}
+
+.property-card .card-item span { margin-top: 5px; }
+
+.card-footer {
+padding: 15px;
+display: flex;
+flex-wrap: wrap-reverse;
+justify-content: space-between;
+align-items: center;
+gap: 15px;
+}
+
+.card-author {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.author-avatar {
+width: 40px;
+height: 40px;
+overflow: hidden;
+border-radius: 50%;
+}
+
+.author-name > a {
+color: var(--dark-jungle-green);
+font-family: var(--ff-poppins);
+font-size: var(--fs-5);
+font-weight: var(--fw-600);
+margin-bottom: 3px;
+}
+
+.author-name > a:is(:hover, :focus) { color: var(--orange-soda); }
+
+.author-title {
+color: var(--cadet);
+font-size: var(--fs-7);
+}
+
+.card-footer-actions {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.card-footer-actions-btn {
+background: var(--cultured-2);
+color: var(--cadet);
+width: 35px;
+height: 35px;
+display: grid;
+place-items: center;
+font-size: 18px;
+}
+
+.card-footer-actions-btn:is(:hover, :focus) {
+background: var(--orange-soda);
+color: var(--white);
+}
+
+
+
+
+
+/*-----------------------------------*\
+#FEATURES
+\*-----------------------------------*/
+
+.features-card:is(:hover, :focus) { background: var(--orange-soda); }
+
+.features-card:is(:hover, :focus) .card-title { color: var(--white); }
+
+.features-card:is(:hover, :focus) .card-btn { color: var(--orange-soda); }
+
+
+
+
+
+/*-----------------------------------*\
+#BLOG
+\*-----------------------------------*/
+
+.blog-card:is(:hover, :focus) .card-banner img { transform: scale(1.1); }
+
+.blog-card :is(.card-meta-link, .publish-date) {
+color: var(--cadet);
+font-size: var(--fs-7);
+font-weight: var(--fw-600);
+display: flex;
+align-items: center;
+gap: 5px;
+transition: var(--transition);
+}
+
+.blog-card :is(.card-meta-link, .publish-date) ion-icon { color: var(--orange-soda); }
+
+.blog-card .card-meta-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+.blog-card .blog-title:is(:hover, :focus) { color: var(--orange-soda); }
+
+
+
+
+
+/*-----------------------------------*\
+#CTA
+\*-----------------------------------*/
+
+.cta-btn:is(:hover, :focus) {
+background: none;
+color: var(--white);
+border-color: transparent;
+}
+
+
+
+
+
+/*-----------------------------------*\
+#FOOTER
+\*-----------------------------------*/
+
+.contact-link :is(address, span) {
+font-size: var(--fs-5);
+transition: var(--transition);
+}
+
+.contact-link:is(:hover, :focus) span { color: var(--orange-soda); }
+
+.footer-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+.copyright a:is(:hover, :focus) { color: var(--orange-soda); }
+
+
+
+
+
+/*-----------------------------------*\
+#MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+* responsive for larger than 600px screen
+*/
+
+@media (min-width: 600px) {
+
+/**
+* CUSTOM PROPERTY
+*/
+
+:root {
+
+/**
+* typography
+*/
+
+--fs-2: 1.875rem;
+
+}
+
+
+
+/**
+* REUSED STYLE
+*/
+
+.container {
+max-width: 550px;
+margin-inline: auto;
+}
+
+.has-scrollbar {
+gap: 25px;
+margin-inline: -25px;
+padding-inline: 25px;
+scroll-padding-left: 25px;
+}
+
+.has-scrollbar > li { min-width: calc(50% - 12.5px); }
+
+
+
+/**
+* SERVICE
+*/
+
+
+
+/**
+* PROPERTY
+*/
+
+.property .container {
+max-width: unset;
+padding-inline: 25px;
+}
+
+
+
+/**
+* CTA
+*/
+
+
+
+/**
+* FOOTER
+*/
+
+}
+
+
+
+
+
+/**
+* responsive for larger than 768px screen
+*/
+
+@media (min-width: 768px) {
+
+/**
+* CUSTOM PROPERTY
+*/
+
+:root {
+
+/**
+* typography
+*/
+
+--fs-1: 2.5rem;
+--fs-5: 0.938rem;
+--fs-6: 0.875rem;
+
+}
+
+
+
+/**
+* REUSED STYLE
+*/
+
+.container { max-width: 720px; }
+
+
+
+/**
+* HEADER
+*/
+
+
+
+/**
+* HERO
+*/
+
+
+
+/**
+* ABOUT
+*/
+
+
+
+/**
+* FEATURES
+*/
+
+
+
+/**
+* BLOG
+*/
+
+
+
+/**
+* CTA
+*/
+
+
+
+/**
+* FOOTER
+*/
+
+}
+
+
+
+
+
+/**
+* responsive for larger than 992px screen
+*/
+
+@media (min-width: 992px) {
+
+/**
+* CUSTOM PROPERTY
+*/
+
+:root {
+
+/**
+* typography
+*/
+
+--fs-1: 3.125rem;
+--fs-4: 1.375rem;
+
+}
+
+
+
+/**
+* REUSED STYLE
+*/
+
+.container { max-width: 970px; }
+
+
+
+/**
+* HEADER
+*/
+
+
+
+/**
+* HERO
+*/
+
+
+
+/**
+* ABOUT
+*/
+
+
+
+/**
+* SERVICE
+*/
+
+
+
+/**
+* PROPERTY
+*/
+
+.property-card .card-content { padding-inline: 30px; }
+
+.card-footer { padding: 20px 30px 30px; }
+
+
+
+/**
+* FEATURES
+*/
+
+
+
+/**
+* BLOG
+*/
+
+
+
+/**
+* CTA
+*/
+
+.cta-card :is(.card-content, .cta-btn) { margin: 0; }
+
+
+
+/**
+* FOOTER
+*/
+
+}
+
+
+
+
+
+/**
+* responsive for larger than 1200px screen
+*/
+
+@media (min-width: 1200px) {
+
+/**
+* CUSTOM PROPERTY
+*/
+
+:root {
+
+/**
+* typography
+*/
+
+--fs-2: 2.75rem;
+--fs-4: 1.5rem;
+
+}
+
+
+
+/**
+* REUSED STYLE
+*/
+
+.container { max-width: 1200px; }
+
+.has-scrollbar > li { min-width: calc(33.33% - 16.66px); }
+
+
+
+/**
+* HEADER
+*/
+
+
+
+/**
+* HERO
+*/
+
+
+
+/**
+* FEATURES
+*/
+
+
+
+/**
+* CTA
+*/
+
+
+
+/**
+* FOOTER
+*/
+
+}
+</style>
+
+
+
+
+
+
+<!-- The video -->
+<!-- <video autoplay muted loop id="myVideo">
+  <source src="./videoplayback.mp4" type="video/mp4">
+</video>
+
+<!-- Optional: some overlay text to describe the video -->
+<!-- <div class="content"> -->
+  <!-- Use a button to pause/play the video with JavaScript -->
+  <!-- <button style="text-align: center;" id="myBtn" onclick="myFunction()">Pause</button>
+</div> -->
+
+<!-- <div class="sketchfab-embed-wrapper"> <iframe title="Flat roof, diagonal supports" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="640" height="480" src="https://sketchfab.com/models/b3be3a6474c149d1a85ce970245d4995/embed?autospin=1&autostart=1"> </iframe> </div> --> 
+
+
+
+
+<style>
+  iframe{
+      display: block;margin-left: auto;margin-right: auto;
+  }
+  main{
+      text-align: center !important;
+      display: block !important;
+  }
+  .canvas{
+      display: block !important;margin-left: auto !important;margin-right: auto !important;
+  }
+  @media(max-width:654px){
+      iframe{
+          width: 600px;
+          height: 500px;
+      }
+      
+  }
+  @media(max-width:616px){
+      iframe{
+          width: 500px;
+          height: 400px;
+      }
+  }
+  @media(max-width:521px){
+      iframe{
+          width: 300px;
+          height: 200px;
+      }
+  }
+
+
+
+</style>
+
+
+
+
+<style>
+  /* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  /* height: 100%; */
+  margin-top: 1.5%;
+}
+
+/* @media(max-width:1438px){
+   #myVideo{
+    height: 83%;
+  } 
+
+} */
+
+
+
+/* Add some content at the bottom of the video/page */
+.content {
+  
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+
+
+<script>
+  // Get the video
+var video = document.getElementById("myVideo");
+
+// Get the button
+var btn = document.getElementById("myBtn");
+
+// Pause and play the video, and change the button text
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="blog" id="blog">
+  <div style="font-family: 'Mukta', sans-serif;
+  font-family: 'Spline Sans Mono', monospace;" class="container">
+
+    <p style="font-family: 'Mukta', sans-serif;
+    font-family: 'Spline Sans Mono', monospace;" class="section-subtitle">Новости & Посты</p>
+
+    <h2 style="font-family: 'Mukta', sans-serif;
+    font-family: 'Spline Sans Mono', monospace;" class="h2 section-title">Последние новости</h2>
+
+    <ul class="blog-list has-scrollbar">
+
+      <li>
+        <div class="blog-card">
+
+          <figure class="card-banner">
+            <img src="https://www.forma.spb.ru/archiblog/wp-content/uploads/MART-architects-interior.jpg" alt="The Most Inspiring Interior Design Of 2021" class="w-100">
+          </figure>
+
+          <div class="blog-content">
+
+            <div class="blog-content-top">
+
+              <ul class="card-meta-list">
+
+                <li>
+                  <a href="#" class="card-meta-link">
+                    <ion-icon name="person"></ion-icon>
+
+                    <span style="font-family: 'Mukta', sans-serif;
+                    font-family: 'Spline Sans Mono', monospace;">с: Админа</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="card-meta-link">
+                    <ion-icon name="pricetags"></ion-icon>
+
+                    <span style="font-family: 'Mukta', sans-serif;
+                    font-family: 'Spline Sans Mono', monospace;">Интерьер</span>
+                  </a>
+                </li>
+
+              </ul>
+
+              <h3 style="font-family: 'Mukta', sans-serif;
+              font-family: 'Spline Sans Mono', monospace;" class="h3 blog-title">
+                <a style="font-family: 'Mukta', sans-serif;
+                font-family: 'Spline Sans Mono', monospace;" href="#">Самый вдохновляющий дизайн интерьера 2022 года</a>
+              </h3>
+
+            </div>
+
+            <div class="blog-content-bottom">
+              <div class="publish-date">
+                <ion-icon name="calendar"></ion-icon>
+
+                <time style="font-family: 'Mukta', sans-serif;
+                font-family: 'Spline Sans Mono', monospace;" datetime="2022-27-04">Апр 27, 2022</time>
+              </div>
+
+              <a style="font-family: 'Mukta', sans-serif;
+              font-family: 'Spline Sans Mono', monospace;" href="#" class="read-more-btn">ЧИТАТЬ ДАЛЬШЕ</a>
+            </div>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="blog-card">
+
+          <figure class="card-banner">
+            <img src="https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/317142069.jpg?k=af250558e33a5743a2a791ff37b6c1a4a692bf9f31e32097904b858aacd17aec&o=" alt="Recent Commercial Real Estate Transactions" class="w-100">
+          </figure>
+
+          <div class="blog-content">
+
+            <div class="blog-content-top">
+
+              <ul class="card-meta-list">
+
+                <li>
+                  <a href="#" class="card-meta-link">
+                    <ion-icon name="person"></ion-icon>
+
+                    <span style="font-family: 'Mukta', sans-serif;
+                    font-family: 'Spline Sans Mono', monospace;">с: Админа</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="card-meta-link">
+                    <ion-icon name="pricetags"></ion-icon>
+
+                    <span style="font-family: 'Mukta', sans-serif;
+                    font-family: 'Spline Sans Mono', monospace;">Недвижимость</span>
+                  </a>
+                </li>
+
+              </ul>
+
+              <h3 style="font-family: 'Mukta', sans-serif;
+              font-family: 'Spline Sans Mono', monospace;" class="h3 blog-title">
+                <a style="font-family: 'Mukta', sans-serif;
+                font-family: 'Spline Sans Mono', monospace;" href="#">Последние сделки с коммерческой недвижимостью</a>
+              </h3>
+
+            </div>
+
+            <div class="blog-content-bottom">
+              <div class="publish-date">
+                <ion-icon name="calendar"></ion-icon>
+
+                <time style="font-family: 'Mukta', sans-serif;
+                font-family: 'Spline Sans Mono', monospace;" datetime="2022-27-04">Апр 27, 2022</time>
+              </div>
+
+              <a style="font-family: 'Mukta', sans-serif;
+              font-family: 'Spline Sans Mono', monospace;" href="#" class="read-more-btn">ЧИТАТЬ ДАЛЬШЕ</a>
+            </div>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="blog-card">
+
+          <figure class="card-banner">
+            <img src="https://trendymen.ru/images/sliders/2712/slide28411.jpg" alt="Renovating a Living Room? Experts Share Their Secrets"
+              class="w-100">
+          </figure>
+
+          <div class="blog-content">
+
+            <div class="blog-content-top">
+
+              <ul class="card-meta-list">
+
+                <li>
+                  <a href="#" class="card-meta-link">
+                    <ion-icon name="person"></ion-icon>
+
+                    <span style="font-family: 'Mukta', sans-serif;
+                    font-family: 'Spline Sans Mono', monospace;">с: Aдмина</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="card-meta-link">
+                    <ion-icon name="pricetags"></ion-icon>
+
+                    <span style="font-family: 'Mukta', sans-serif;
+                    font-family: 'Spline Sans Mono', monospace;">Комната</span>
+                  </a>
+                </li>
+
+              </ul>
+
+              <h3 class="h3 blog-title">
+                <a style="font-family: 'Mukta', sans-serif;
+                font-family: 'Spline Sans Mono', monospace;" href="#">Ремонтируете гостиную? Эксперты делятся своими секретами</a>
+              </h3>
+
+            </div>
+
+            <div class="blog-content-bottom">
+              <div class="publish-date">
+                <ion-icon name="calendar"></ion-icon>
+
+                <time style="font-family: 'Mukta', sans-serif;
+                font-family: 'Spline Sans Mono', monospace;" datetime="2022-27-04">Апр 27, 2022</time>
+              </div>
+
+              <a style="font-family: 'Mukta', sans-serif;
+              font-family: 'Spline Sans Mono', monospace;" href="#" class="read-more-btn">ЧИТАТЬ ДАЛЬШЕ</a>
+            </div>
+
+          </div>
+
+        </div>
+      </li>
+
+    </ul>
+
+  </div>
+</section>
+
+<style>
+    /*-----------------------------------*\
+#style.css
+\*-----------------------------------*/
+
+/**
+* copyright 2022 codewithsadee
+*/
+
+
+
+
+
+/*-----------------------------------*\
+#CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+
+/**
+* colors
+*/
+
+--dark-jungle-green: hsl(188, 63%, 7%);
+--prussian-blue: hsl(200, 69%, 14%);
+--raisin-black-1: hsl(227, 29%, 13%);
+--raisin-black-2: hsl(229, 17%, 19%);
+--yellow-green: hsl(89, 72%, 45%);
+--orange-soda: hsl(9, 100%, 62%);
+--cultured-1: hsl(0, 0%, 93%);
+--cultured-2: hsl(192, 24%, 96%);
+--misty-rose: hsl(7, 56%, 91%);
+--alice-blue: hsl(210, 100%, 97%);
+--seashell: hsl(8, 100%, 97%);
+--cadet: hsl(200, 15%, 43%);
+--white: hsl(0, 0%, 100%);
+--black: hsl(0, 0%, 0%);
+--opal: hsl(180, 20%, 62%);
+
+/**
+* typography
+*/
+
+--ff-nunito-sans: "Nunito Sans", sans-serif;
+--ff-poppins: "Poppins", sans-serif;
+
+--fs-1: 1.875rem;
+--fs-2: 1.5rem;
+--fs-3: 1.375rem;
+--fs-4: 1.125rem;
+--fs-5: 0.875rem;
+--fs-6: 0.813rem;
+--fs-7: 0.75rem;
+
+--fw-500: 500;
+--fw-600: 600;
+--fw-700: 700;
+
+/**
+* transition
+*/
+
+--transition: 0.25s ease;
+
+/**
+* spacing
+*/
+
+--section-padding: 100px;
+
+/**
+* shadow
+*/
+
+--shadow-1: 0 5px 20px 0 hsla(219, 56%, 21%, 0.1);
+--shadow-2: 0 16px 32px hsla(188, 63%, 7%, 0.1);
+
+}
+
+
+
+
+
+/*-----------------------------------*\
+#RESET
+\*-----------------------------------*/
+
+*, *::before, *::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+li { list-style: none; }
+
+a { text-decoration: none; }
+
+a,
+img,
+span,
+ion-icon { display: block; }
+
+ion-icon { pointer-events: none; }
+
+html {
+font-family: var(--ff-nunito-sans);
+scroll-behavior: smooth;
+}
+
+body {
+background: var(--white);
+overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+width: 10px;
+height: 8px;
+}
+
+::-webkit-scrollbar-track { background: var(--white); }
+
+::-webkit-scrollbar-thumb {
+background: var(--cadet);
+border-left: 2px solid var(--white);
+}
+
+
+
+
+
+/*-----------------------------------*\
+#REUSED STYLE
+\*-----------------------------------*/
+
+.container { padding-inline: 15px; }
+
+a { transition: var(--transition); }
+
+.h2,
+.h3 {
+color: var(--dark-jungle-green);
+font-family: var(--ff-poppins);
+line-height: 1.3;
+}
+
+.h2 { font-size: var(--fs-2); }
+
+.h3 {
+font-size: var(--fs-4);
+font-weight: var(--font-weight, 700);
+}
+
+.h3 > a { color: inherit; }
+
+.btn:is(:hover, :focus) {
+background: var(--black);
+color: var(--dark-jungle-green);
+border-color: var(--black);
+}
+
+.btn:is(:hover, :focus)::before { width: 100%; }
+
+.w-100 { width: 100%; }
+
+.section-subtitle {
+color: var(--orange-soda);
+font-size: var(--fs-5);
+font-weight: var(--fw-600);
+padding: 5px 20px;
+background: hsla(9, 100%, 62%, 0.1);
+width: max-content;
+border-radius: 50px;
+margin-inline: auto;
+margin-bottom: 15px;
+}
+
+.section-title {
+text-align: var(--text-align, center);
+margin-bottom: var(--margin-bottom, 50px);
+}
+
+.has-scrollbar {
+display: flex;
+align-items: flex-start;
+gap: 15px;
+overflow-x: auto;
+margin-inline: -15px;
+padding-inline: 15px;
+scroll-padding-left: 15px;
+padding-bottom: 60px;
+scroll-snap-type: inline mandatory;
+}
+
+.has-scrollbar > li {
+min-width: 100%;
+scroll-snap-align: start;
+}
+
+.has-scrollbar::-webkit-scrollbar-track {
+background: var(--cultured-2);
+outline: 2px solid var(--cadet);
+border-radius: 10px;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+background: var(--cadet);
+border: 1px solid var(--cultured-2);
+border-radius: 10px;
+}
+
+.has-scrollbar::-webkit-scrollbar-button { width: 15%; }
+
+
+
+
+
+/*-----------------------------------*\
+#HEADER
+\*-----------------------------------*/
+
+.header-top-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+.header-top-btn:is(:hover, :focus) { --orange-soda: hsl(7, 72%, 46%); }
+
+.navbar-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+.header-bottom-actions-btn:is(:hover, :focus) ion-icon { color: var(--orange-soda); }
+
+
+
+
+
+/*-----------------------------------*\
+#HERO
+\*-----------------------------------*/
+
+
+
+
+
+/*-----------------------------------*\
+#ABOUT
+\*-----------------------------------*/
+
+
+
+
+
+/*-----------------------------------*\
+#SERVICE
+\*-----------------------------------*/
+
+.service-card .card-title > a:is(:hover, :focus) { color: var(--orange-soda); }
+
+.service-card:is(:hover, :focus) .card-link { color: var(--orange-soda); }
+
+.service-card:is(:hover, :focus)::after { width: 100%; }
+
+
+
+
+
+/*-----------------------------------*\
+#PROPERTY
+\*-----------------------------------*/
+
+.banner-actions-btn:is(:hover, :focus) { color: var(--orange-soda); }
+
+.property-card .card-title > a:is(:hover, :focus) { color: var(--orange-soda); }
+
+.property-card .card-item :is(strong, ion-icon) { display: inline-block; }
+
+.author-name > a:is(:hover, :focus) { color: var(--orange-soda); }
+
+.card-footer-actions-btn:is(:hover, :focus) {
+background: var(--orange-soda);
+color: var(--white);
+}
+
+
+
+
+
+/*-----------------------------------*\
+#FEATURES
+\*-----------------------------------*/
+
+.features-card:is(:hover, :focus) { background: var(--orange-soda); }
+
+.features-card:is(:hover, :focus) .card-title { color: var(--white); }
+
+.features-card:is(:hover, :focus) .card-btn { color: var(--orange-soda); }
+
+
+
+
+
+/*-----------------------------------*\
+#BLOG
+\*-----------------------------------*/
+
+.blog { padding-block: var(--section-padding); }
+
+.blog-card { box-shadow: var(--shadow-2); }
+
+.blog-card .card-banner {
+overflow: hidden;
+aspect-ratio: 2 / 1.5;
+}
+
+.blog-card .card-banner img {
+height: 100%;
+object-fit: cover;
+transition: 0.5s ease;
+}
+
+.blog-card:is(:hover, :focus) .card-banner img { transform: scale(1.1); }
+
+.blog-content { padding: 30px; }
+
+.blog-card .card-meta-list {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 15px;
+}
+
+.blog-card :is(.card-meta-link, .publish-date) {
+color: var(--cadet);
+font-size: var(--fs-7);
+font-weight: var(--fw-600);
+display: flex;
+align-items: center;
+gap: 5px;
+transition: var(--transition);
+}
+
+.blog-card :is(.card-meta-link, .publish-date) ion-icon { color: var(--orange-soda); }
+
+.blog-card .card-meta-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+.blog-title {
+font-size: 1rem;
+--font-weight: var(--fw-600);
+}
+
+.blog-card .blog-title:is(:hover, :focus) { color: var(--orange-soda); }
+
+.blog-content-bottom {
+padding-top: 20px;
+border-top: 1px solid hsla(0, 0%, 0%, 0.1);
+margin-top: 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.blog-card .read-more-btn {
+color: var(--orange-soda);
+font-size: var(--fs-7);
+font-weight: var(--fw-600);
+text-transform: uppercase;
+}
+
+
+
+
+
+/*-----------------------------------*\
+#CTA
+\*-----------------------------------*/
+
+.cta-btn:is(:hover, :focus) {
+background: none;
+color: var(--white);
+border-color: transparent;
+}
+
+
+
+
+
+/*-----------------------------------*\
+#FOOTER
+\*-----------------------------------*/
+
+.contact-link :is(address, span) {
+font-size: var(--fs-5);
+transition: var(--transition);
+}
+
+.contact-link:is(:hover, :focus) span { color: var(--orange-soda); }
+
+.footer-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+.copyright a:is(:hover, :focus) { color: var(--orange-soda); }
+
+
+
+
+
+/*-----------------------------------*\
+#MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+* responsive for larger than 600px screen
+*/
+
+@media (min-width: 600px) {
+
+/**
+* CUSTOM PROPERTY
+*/
+
+:root {
+
+/**
+* typography
+*/
+
+--fs-2: 1.875rem;
+
+}
+
+
+
+/**
+* REUSED STYLE
+*/
+
+.container {
+max-width: 550px;
+margin-inline: auto;
+}
+
+.has-scrollbar {
+gap: 25px;
+margin-inline: -25px;
+padding-inline: 25px;
+scroll-padding-left: 25px;
+}
+
+.has-scrollbar > li { min-width: calc(50% - 12.5px); }
+
+
+
+/**
+* SERVICE
+*/
+
+
+
+/**
+* PROPERTY
+*/
+
+
+
+/**
+* CTA
+*/
+
+
+
+/**
+* FOOTER
+*/
+
+}
+
+
+
+
+
+/**
+* responsive for larger than 768px screen
+*/
+
+@media (min-width: 768px) {
+
+/**
+* CUSTOM PROPERTY
+*/
+
+:root {
+
+/**
+* typography
+*/
+
+--fs-1: 2.5rem;
+--fs-5: 0.938rem;
+--fs-6: 0.875rem;
+
+}
+
+
+
+/**
+* REUSED STYLE
+*/
+
+.container { max-width: 720px; }
+
+
+
+/**
+* HEADER
+*/
+
+
+
+/**
+* HERO
+*/
+
+
+
+/**
+* ABOUT
+*/
+
+
+
+/**
+* FEATURES
+*/
+
+
+
+/**
+* BLOG
+*/
+
+.blog-card { --fs-7: 0.875rem; }
+
+.blog-title { font-size: 1.25rem; }
+
+.blog .card-meta-list { gap: 30px; }
+
+
+
+/**
+* CTA
+*/
+
+
+
+/**
+* FOOTER
+*/
+
+}
+
+
+
+
+
+/**
+* responsive for larger than 992px screen
+*/
+
+@media (min-width: 992px) {
+
+/**
+* CUSTOM PROPERTY
+*/
+
+:root {
+
+/**
+* typography
+*/
+
+--fs-1: 3.125rem;
+--fs-4: 1.375rem;
+
+}
+
+
+
+/**
+* REUSED STYLE
+*/
+
+.container { max-width: 970px; }
+
+
+
+/**
+* HEADER
+*/
+
+
+
+/**
+* HERO
+*/
+
+
+
+/**
+* ABOUT
+*/
+
+
+
+/**
+* SERVICE
+*/
+
+
+
+/**
+* PROPERTY
+*/
+
+
+
+/**
+* FEATURES
+*/
+
+
+
+/**
+* BLOG
+*/
+
+.blog-title { font-size: 1.375rem; }
+
+
+
+/**
+* CTA
+*/
+
+.cta-card :is(.card-content, .cta-btn) { margin: 0; }
+
+
+
+/**
+* FOOTER
+*/
+
+}
+
+
+
+
+
+/**
+* responsive for larger than 1200px screen
+*/
+
+@media (min-width: 1200px) {
+
+/**
+* CUSTOM PROPERTY
+*/
+
+:root {
+
+/**
+* typography
+*/
+
+--fs-2: 2.75rem;
+--fs-4: 1.5rem;
+
+}
+
+
+
+/**
+* REUSED STYLE
+*/
+
+.container { max-width: 1200px; }
+
+.has-scrollbar > li { min-width: calc(33.33% - 16.66px); }
+
+
+
+/**
+* HEADER
+*/
+
+
+
+/**
+* HERO
+*/
+
+
+
+/**
+* FEATURES
+*/
+
+
+
+/**
+* CTA
+*/
+
+
+
+/**
+* FOOTER
+*/
+
+}
+</style>
+
+<div id="liga"> 
+  <div class="contactform"> 
+    <h5>Contact us</h5> 
+    <div class="row100"> 
+      <div class="col22"> 
+   
+        <div class="inputBox"> 
+          <input type="text" name="" required="required"> 
+          <span class="text2">First Name</span> 
+          <span class="line1"></span> 
+        </div> 
+   
+   
+      </div> 
+      <div class="col22"> 
+   
+        <div class="inputBox"> 
+          <input type="text" name="" required="required"> 
+          <span class="text2">Last Name</span> 
+          <span class="line1"></span> 
+        </div> 
+   
+   
+      </div> 
+    </div> 
+    <div class="row100"> 
+      <div class="col22"> 
+   
+        <div class="inputBox"> 
+          <input type="text" name="" required="required"> 
+          <span class="text2">Email</span> 
+          <span class="line1"></span> 
+        </div> 
+   
+   
+      </div> 
+      <div class="col22"> 
+   
+        <div class="inputBox"> 
+          <input type="text" name="" required="required"> 
+          <span class="text2">Mobile</span> 
+          <span class="line1"></span> 
+        </div> 
+   
+   
+      </div> 
+    </div> 
+    <div class="row100"> 
+      <div class="col22"> 
+   
+        <div class="inputBox textarea"> 
+          <textarea required="required"></textarea> 
+          <input type="text" name="" required="required"> 
+          <span class="text2">Type your message Here</span> 
+          <span class="line1"></span> 
+        </div> 
+   
+   
+      </div> 
+   
+      </div> 
+      <div class="row100"> 
+        <div class="col22"> 
+          <input class="sendd" type="submit" value="Send"> 
+          </div> 
+          </div> 
+  </div> 
+  </div> 
+  <style> 
+    *{ 
+      box-sizing: border-box; 
+    } 
+    #liga{ 
+      display: flex; 
+      justify-content: center; 
+      min-height: 100vh; 
+      background: white; 
+    } 
+   
+    .contactform{ 
+      width: 80%; 
+      padding: 20px; 
+    } 
+   
+    h5{ 
+      width: 100%; 
+      color: black; 
+      font-size: 36px; 
+      text-align: center; 
+      margin-bottom: 10px; 
+      font-family: 'Mukta', sans-serif; 
+            font-family: 'Spline Sans Mono', monospace; 
+    } 
+   
+    .row100{ 
+      position: relative; 
+      width: 100%; 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); 
+    } 
+   
+    .col22{ 
+      position: relative; 
+      width: 100%; 
+      padding: 0 10px; 
+      margin: 30px 0 10px; 
+      transition: 0.5s; 
+    } 
+   
+    .inputBox{ 
+      position: relative; 
+      width: 100%; 
+      height: 40px; 
+      color: black; 
+    } 
+   
+    .inputBox input, 
+    .inputBox.textarea textarea 
+    { 
+      position: absolute; 
+      width: 100%; 
+      height: 100%; 
+      background: transparent; 
+      box-shadow: none; 
+      border: none; 
+      outline: none; 
+      font-size: 18px; 
+      padding: 0 10px; 
+      z-index: 1; 
+      color: white; 
+      font-family: 'Mukta', sans-serif; 
+            font-family: 'Spline Sans Mono', monospace; 
+    } 
+    .text2{ 
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      line-height: 40px; 
+      font-size: 18px;  
+      padding: 0 10px; 
+      display: block; 
+      transition: 0.5s; 
+      font-family: 'Mukta', sans-serif; 
+            font-family: 'Spline Sans Mono', monospace; 
+      pointer-events: none; 
+    } 
+   
+    .inputBox input:focus + .text2, 
+    .inputBox input:valid + .text2 
+    { 
+      top: -35px; 
+      left: -10px; 
+    } 
+   
+    .inputBox .line1{ 
+      position: absolute; 
+   
+      bottom: 0; 
+      display: block; 
+      width: 100%; 
+      height: 2px; 
+      background: black; 
+      transition: 0.5s; 
+      border-radius: 2px; 
+      pointer-events: none; 
+    } 
+   
+    .inputBox input:focus ~ .line1, 
+    .inputBox input:valid ~ .line1{ 
+      height: 100%; 
+    } 
+   
+    .inputBox.textarea{ 
+      position: relative; 
+      width: 100%; 
+      height: 100px; 
+      padding: 10px 0; 
+   
+    } 
+   
+    .inputBox.textarea textarea{ 
+      height: 100%; 
+      resize: none; 
+    } 
+   
+    .inputBox textarea:focus + .text2, 
+    .inputBox textarea:valid + .text2 
+    { 
+      top: -35px; 
+      left: -10px; 
+    } 
+   
+   
+    .inputBox textarea:focus ~ .line1, 
+    .inputBox textarea:valid ~ .line1{ 
+      height: 100%; 
+    } 
+   
+    .sendd{ 
+      border: none; 
+      padding: 7px 35px; 
+      cursor: pointer; 
+      outline: none; 
+      background: black; 
+      color: white; 
+      font-size: 18px; 
+      border-radius: 2px;
+      font-family: 'Mukta', sans-serif; 
+          font-family: 'Spline Sans Mono', monospace; 
+  } 
+ 
+ 
+   
+ 
+ 
+ 
+</style>
+
+
+
+<div class="footer-bottom">
+  <div class="container">
+
+    <p style="font-family: 'Mukta', sans-serif;
+    font-family: 'Spline Sans Mono', monospace; color: white !important;" class="copyright">
+      <!-- &copy; 2022--> <a href="#">Все права защищены Copyright © 2014-2020</a>.  
+    </p>
+
+  </div>
+</div>
+
+
+
+
+
+
+<style>
+
+    /*-----------------------------------*\
+#style.css
+\*-----------------------------------*/
+
+/**
+* copyright 2022 codewithsadee
+*/
+
+
+
+
+
+/*-----------------------------------*\
+#CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+
+/**
+* colors
+*/
+
+--dark-jungle-green: hsl(188, 63%, 7%);
+--prussian-blue: hsl(200, 69%, 14%);
+--raisin-black-1: hsl(227, 29%, 13%);
+--raisin-black-2: hsl(229, 17%, 19%);
+--yellow-green: hsl(89, 72%, 45%);
+--orange-soda: hsl(9, 100%, 62%);
+--cultured-1: hsl(0, 0%, 93%);
+--cultured-2: hsl(192, 24%, 96%);
+--misty-rose: hsl(7, 56%, 91%);
+--alice-blue: hsl(210, 100%, 97%);
+--seashell: hsl(8, 100%, 97%);
+--cadet: hsl(200, 15%, 43%);
+--white: hsl(0, 0%, 100%);
+--black: hsl(0, 0%, 0%);
+--opal: hsl(180, 20%, 62%);
+
+/**
+* typography
+*/
+
+--ff-nunito-sans: "Nunito Sans", sans-serif;
+--ff-poppins: "Poppins", sans-serif;
+
+--fs-1: 1.875rem;
+--fs-2: 1.5rem;
+--fs-3: 1.375rem;
+--fs-4: 1.125rem;
+--fs-5: 0.875rem;
+--fs-6: 0.813rem;
+--fs-7: 0.75rem;
+
+--fw-500: 500;
+--fw-600: 600;
+--fw-700: 700;
+
+/**
+* transition
+*/
+
+--transition: 0.25s ease;
+
+/**
+* spacing
+*/
+
+--section-padding: 100px;
+
+/**
+* shadow
+*/
+
+--shadow-1: 0 5px 20px 0 hsla(219, 56%, 21%, 0.1);
+--shadow-2: 0 16px 32px hsla(188, 63%, 7%, 0.1);
+
+}
+
+
+
+
+
+/*-----------------------------------*\
+#RESET
+\*-----------------------------------*/
+
+*, *::before, *::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+a { text-decoration: none; }
+
+a { display: block; }
+
+html {
+font-family: var(--ff-nunito-sans);
+scroll-behavior: smooth;
+}
+
+body {
+background: var(--white);
+overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+width: 10px;
+height: 8px;
+}
+
+::-webkit-scrollbar-track { background: var(--white); }
+
+::-webkit-scrollbar-thumb {
+background: var(--cadet);
+border-left: 2px solid var(--white);
+}
+
+
+
+
+
+/*-----------------------------------*\
+#REUSED STYLE
+\*-----------------------------------*/
+
+.container { padding-inline: 15px; }
+
+a { transition: var(--transition); }
+
+.btn:is(:hover, :focus) {
+background: var(--black);
+color: var(--dark-jungle-green);
+border-color: var(--black);
+}
+
+.btn:is(:hover, :focus)::before { width: 100%; }
+
+
+
+
+
+/*-----------------------------------*\
+#HEADER
+\*-----------------------------------*/
+
+.header-top-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+.header-top-btn:is(:hover, :focus) { --orange-soda: hsl(7, 72%, 46%); }
+
+.navbar-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+.header-bottom-actions-btn:is(:hover, :focus) ion-icon { color: var(--orange-soda); }
+
+
+
+
+
+/*-----------------------------------*\
+#HERO
+\*-----------------------------------*/
+
+
+
+
+
+/*-----------------------------------*\
+#ABOUT
+\*-----------------------------------*/
+
+
+
+
+
+/*-----------------------------------*\
+#SERVICE
+\*-----------------------------------*/
+
+.service-card .card-title > a:is(:hover, :focus) { color: var(--orange-soda); }
+
+.service-card:is(:hover, :focus) .card-link { color: var(--orange-soda); }
+
+.service-card:is(:hover, :focus)::after { width: 100%; }
+
+
+
+
+
+/*-----------------------------------*\
+#PROPERTY
+\*-----------------------------------*/
+
+.banner-actions-btn:is(:hover, :focus) { color: var(--orange-soda); }
+
+.property-card .card-title > a:is(:hover, :focus) { color: var(--orange-soda); }
+
+.property-card .card-item :is(strong, ion-icon) { display: inline-block; }
+
+.author-name > a:is(:hover, :focus) { color: var(--orange-soda); }
+
+.card-footer-actions-btn:is(:hover, :focus) {
+background: var(--orange-soda);
+color: var(--white);
+}
+
+
+
+
+
+/*-----------------------------------*\
+#FEATURES
+\*-----------------------------------*/
+
+.features-card:is(:hover, :focus) { background: var(--orange-soda); }
+
+.features-card:is(:hover, :focus) .card-title { color: var(--white); }
+
+.features-card:is(:hover, :focus) .card-btn { color: var(--orange-soda); }
+
+
+
+
+
+/*-----------------------------------*\
+#BLOG
+\*-----------------------------------*/
+
+.blog-card:is(:hover, :focus) .card-banner img { transform: scale(1.1); }
+
+.blog-card :is(.card-meta-link, .publish-date) {
+color: var(--cadet);
+font-size: var(--fs-7);
+font-weight: var(--fw-600);
+display: flex;
+align-items: center;
+gap: 5px;
+transition: var(--transition);
+}
+
+.blog-card :is(.card-meta-link, .publish-date) ion-icon { color: var(--orange-soda); }
+
+.blog-card .card-meta-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+.blog-card .blog-title:is(:hover, :focus) { color: var(--orange-soda); }
+
+
+
+
+
+/*-----------------------------------*\
+#CTA
+\*-----------------------------------*/
+
+.cta-btn:is(:hover, :focus) {
+background: none;
+color: var(--white);
+border-color: transparent;
+}
+
+
+
+
+
+/*-----------------------------------*\
+#FOOTER
+\*-----------------------------------*/
+
+.contact-link :is(address, span) {
+font-size: var(--fs-5);
+transition: var(--transition);
+}
+
+.contact-link:is(:hover, :focus) span { color: var(--orange-soda); }
+
+.footer-link:is(:hover, :focus) { color: var(--orange-soda); }
+
+.footer-bottom {
+background: var(--raisin-black-2);
+padding-block: 25px;
+}
+
+.copyright {
+font-size: var(--fs-5);
+text-align: center;
+}
+
+.copyright a { display: inline-block; }
+
+.copyright a:is(:hover, :focus) { color: var(--orange-soda); }
+
+
+
+
+
+/*-----------------------------------*\
+#MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+* responsive for larger than 600px screen
+*/
+
+@media (min-width: 600px) {
+
+/**
+* CUSTOM PROPERTY
+*/
+
+:root {
+
+/**
+* typography
+*/
+
+--fs-2: 1.875rem;
+
+}
+
+
+
+/**
+* REUSED STYLE
+*/
+
+.container {
+max-width: 550px;
+margin-inline: auto;
+}
+
+
+
+/**
+* SERVICE
+*/
+
+
+
+/**
+* PROPERTY
+*/
+
+
+
+/**
+* CTA
+*/
+
+
+
+/**
+* FOOTER
+*/
+
+}
+
+
+
+
+
+/**
+* responsive for larger than 768px screen
+*/
+
+@media (min-width: 768px) {
+
+/**
+* CUSTOM PROPERTY
+*/
+
+:root {
+
+/**
+* typography
+*/
+
+--fs-1: 2.5rem;
+--fs-5: 0.938rem;
+--fs-6: 0.875rem;
+
+}
+
+
+
+/**
+* REUSED STYLE
+*/
+
+.container { max-width: 720px; }
+
+
+
+/**
+* HEADER
+*/
+
+
+
+/**
+* HERO
+*/
+
+
+
+/**
+* ABOUT
+*/
+
+
+
+/**
+* FEATURES
+*/
+
+
+
+/**
+* BLOG
+*/
+
+
+
+/**
+* CTA
+*/
+
+
+
+/**
+* FOOTER
+*/
+
+}
+
+
+
+
+
+/**
+* responsive for larger than 992px screen
+*/
+
+@media (min-width: 992px) {
+
+/**
+* CUSTOM PROPERTY
+*/
+
+:root {
+
+/**
+* typography
+*/
+
+--fs-1: 3.125rem;
+--fs-4: 1.375rem;
+
+}
+
+
+
+/**
+* REUSED STYLE
+*/
+
+.container { max-width: 970px; }
+
+
+
+/**
+* HEADER
+*/
+
+
+
+/**
+* HERO
+*/
+
+
+
+/**
+* ABOUT
+*/
+
+
+
+/**
+* SERVICE
+*/
+
+
+
+/**
+* PROPERTY
+*/
+
+
+
+/**
+* FEATURES
+*/
+
+
+
+/**
+* BLOG
+*/
+
+
+
+/**
+* CTA
+*/
+
+.cta-card :is(.card-content, .cta-btn) { margin: 0; }
+
+
+
+/**
+* FOOTER
+*/
+
+}
+
+
+
+
+
+/**
+* responsive for larger than 1200px screen
+*/
+
+@media (min-width: 1200px) {
+
+/**
+* CUSTOM PROPERTY
+*/
+
+:root {
+
+/**
+* typography
+*/
+
+--fs-2: 2.75rem;
+--fs-4: 1.5rem;
+
+}
+
+
+
+/**
+* REUSED STYLE
+*/
+
+.container { max-width: 1200px; }
+
+
+
+/**
+* HEADER
+*/
+
+
+
+/**
+* HERO
+*/
+
+
+
+/**
+* FEATURES
+*/
+
+
+
+/**
+* CTA
+*/
+
+
+
+/**
+* FOOTER
+*/
+
+}
+
+</style>
+
+
+
+
+
+</body>
+</html>
